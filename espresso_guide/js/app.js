@@ -13,7 +13,7 @@ $(".modal-close").click(function(event) {  // Modal Close
 
 
 $(".cappuccino").click(function() {   // Modal Open
-	$("#modal-cappuccino").show("#modal-show");
+	$("#modal-cappuccino").fadeIn("#modal-show");
 });
 
 $(".modal-close").click(function(event) { // Modal Close
@@ -22,7 +22,7 @@ $(".modal-close").click(function(event) { // Modal Close
 
 
 $(".cafe-latte").click(function() {   // Modal Open 	
-	$("#modal-cafe-latte").show("#modal-show");
+	$("#modal-cafe-latte").fadeIn("#modal-show");
 });
 
 $(".modal-close").click(function(event) { // Modal Close
@@ -31,7 +31,7 @@ $(".modal-close").click(function(event) { // Modal Close
 
 
 $(".flat-white").click(function() {   // Modal Open 	
-	$("#modal-flat-white").show("#modal-show");
+	$("#modal-flat-white").fadeIn("#modal-show");
 });
 
 $(".modal-close").click(function(event) { // Modal Close
@@ -40,7 +40,7 @@ $(".modal-close").click(function(event) { // Modal Close
 
 
 $(".americano").click(function() {  // Modal Open 	
-	$("#modal-americano").show("#modal-show");
+	$("#modal-americano").fadeIn("#modal-show");
 });
 
 $(".modal-close").click(function(event) { // Modal Close
@@ -49,7 +49,7 @@ $(".modal-close").click(function(event) { // Modal Close
 
 
 $(".red-eye").click(function() {   // Modal Open
-	$("#modal-red-eye").show("#modal-show");
+	$("#modal-red-eye").fadeIn("#modal-show");
 });
 
 $(".modal-close").click(function(event) { // Modal Close
@@ -58,7 +58,7 @@ $(".modal-close").click(function(event) { // Modal Close
 
 
 $(".macchiato").click(function() {  // Modal Open 	
-	$("#modal-macchiato").show("#modal-show");
+	$("#modal-macchiato").fadeIn("#modal-show");
 });
 
 $(".modal-close").click(function(event) { // Modal Close
@@ -67,7 +67,7 @@ $(".modal-close").click(function(event) { // Modal Close
 
 
 $(".cortado").click(function() {  // Modal Open 	
-	$("#modal-cortado").show("#modal-show");
+	$("#modal-cortado").fadeIn("#modal-show");
 });
 
 $(".modal-close").click(function(event) { // Modal Close
@@ -76,7 +76,7 @@ $(".modal-close").click(function(event) { // Modal Close
 
 
 $(".mocha").click(function() {  // Modal Open 	
-	$("#modal-mocha").show("#modal-show");
+	$("#modal-mocha").fadeIn("#modal-show");
 });
 
 $(".modal-close").click(function(event) { // Modal Close
