@@ -112,6 +112,8 @@ function showPages(n) {
 // jQuery key codes: 27 = escape key, 
 // 37 = previous slide, 39 = next slide 
 
+// JQuery - left & right arrows to navigate to next slides
+
 $(document).keydown(function (event) {
   if (event.keyCode == 37) {
     $(plusSlides(-1)).click(); //on left arrow, click prev 

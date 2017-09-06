@@ -5,7 +5,7 @@
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Espresso Guide</title>
-    <link rel="stylesheet" href="css/style-a.css">
+    <link rel="stylesheet" href="css/style-b.css">
     <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
     <style>
       @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Fjalla+One|Oswald|Sanchez');
@@ -115,18 +115,17 @@ OPTIONAL
 
 
 
-<!-- new modal layout --> 
+<!-- Espresso Modal layout --> 
 
+  <section id="modal-espresso" class="page">
+    <div class="modal-content"> <!--modal-content starts-->
 
 <!-- box 1 -->
 
-  <section id="modal-espresso" class="page">
-    <div class="m-content"> <!--modal-content starts-->
-
       <div class="modal-layout1"> <!--modal-layout starts-->
 
-        <div class="animation-short"><!--animation starts-->
-          <div class="espresso-cup">
+        <div class="animation-short"><!--animation-short starts-->
+          <div class="espresso-cup"><!--espresso-cup starts-->
             <div class="esp-cup-top-md"></div>
             <div class="esp-cup-mid-md"></div>
             <div class="esp-cup-bottom-lg"></div>
@@ -136,8 +135,8 @@ OPTIONAL
               <span class="desc-rule"></span>
             </div>
           </div>  
-        </div><!--animation ends-->
-      </div>   
+        </div><!--espresso-cup ends-->
+      </div>  <!--animation-short ends--> 
 
      <div class="modal-label">Espresso</div>    
 
@@ -147,9 +146,9 @@ OPTIONAL
 
       <div class="modal-layout2"> <!--modal-layout2 starts-->
 
-      <span class="m-close">&times;</span> <!--close button-->
+      <span class="modal-close">&times;</span> <!--close button-->
 
-        <div class="description">
+        <div class="description"> <!--description starts-->
           <h2>Espresso</h2>
           <p>The espresso is the foundation and the most important part to every espresso based drink.</p>
           <p>A concentrated drink produced by forcing hot water through finely ground coffee with an espresso machine for a brewed quantity of approximately 1 to 1-1/2 oz. A perfect espresso is deliciously smooth, with full body, intense aroma and a velvety crema. Best served in a pre-heated espresso cup. </p>
@@ -157,7 +156,7 @@ OPTIONAL
           <ul>
             <li>1 shot of espresso</li>
           </ul>  
-        </div>
+        </div> <!--description ends-->
 
       </div>  <!--modal-layout ends-->
 
@@ -171,70 +170,22 @@ OPTIONAL
   </section>  
 
 
-
-<!--  real modal
-
-  <section id="modal-espresso" class="page">
-    <div class="modal-content">
-        
-        <span class="modal-close">&times;</span>
-
-      <div class="modal-layout">
-
-        <div class="animation-short">
-          <div class="espresso-cup">
-            <div class="esp-cup-top-md"></div>
-            <div class="esp-cup-mid-md"></div>
-            <div class="esp-cup-bottom-lg"></div>
-            <div class="cup-handle-anime"></div>
-          </div> 
-          <div class="ingred-container-short">
-            <div class="ingredient-1">Espresso
-              <span class="desc-rule"></span>
-            </div>
-          </div>  
-        </div>
-
-     <div class="modal-label">Espresso</div>    
-
-        <div class="rule"></div>
-
-        <div class="desc">
-
-          <h2>Espresso</h2>
-          <p>The espresso is the foundation and the most important part to every espresso based drink.</p>
-          <p>A concentrated drink produced by forcing hot water through finely ground coffee with an espresso machine for a brewed quantity of approximately 1 to 1-1/2 oz. A perfect espresso is deliciously smooth, with full body, intense aroma and a velvety crema. Best served in a pre-heated espresso cup. </p>
-          <h3>Ingredients</h3>
-          <ul>
-            <li>1 shot of espresso</li>
-          </ul>  
-        </div>
-
-      </div>  
-
-      <div class="buttons">
-        <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)"> &#10095;</a>  
-      </div>  
-    </div> 
-  </section>
-
--->
+<!-- Cappuccino Modal layout --> 
 
   <section id="modal-cappuccino" class="page">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-      <div class="modal-layout">
+    <div class="modal-content"> <!--modal-content starts-->
+
+<!-- box 1 -->    
+
+      <div class="modal-layout1"> <!--modal-layout starts-->
 
         <div class="animation">
-
           <div class="cappuccino-cup">
             <div class="cap-cup-top-lg"></div>
             <div class="cap-cup-mid-md"></div>
             <div class="cap-cup-bottom-lg"></div>
             <div class="cup-handle-anime"></div>
           </div> 
-
           <div class="ingred-container">
             <div class="ingredient-3">Foam
               <span class="desc-rule3"></span>
@@ -246,14 +197,17 @@ OPTIONAL
               <span class="desc-rule"></span>
             </div>            
           </div>  
-
         </div>
+        <div class="modal-label">Cappucino</div> 
+      </div>  <!--modal-layout ends-->
 
-      <div class="modal-label">Cappucino</div> 
+<!-- box 2 -->   
 
-        <div class="rule"></div>  
+      <div class="modal-layout2"> <!--modal-layout2 starts-->
 
-        <div class="desc">
+      <span class="modal-close">&times;</span> <!--close button-->
+
+        <div class="description">
          <h2>Cappuccino</h2> 
           <p>An Italian coffee drink that is traditionally prepared with espresso, steamed milk, and foam.</p>
 
@@ -266,28 +220,33 @@ OPTIONAL
             <li>1/3 of foam on top of the steamed milk</li>
           </ul>
         </div>
-      </div> 
-      <div class="buttons">
+      </div>  <!--modal-layout2 ends-->
+ 
+      <div class="buttons"> <!-- next/prev buttons start -->
         <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)"> &#10095;</a>  
-      </div> 
-    </div> 
+      </div>  <!-- next/prev buttons ends -->       
+    
+    </div>  <!--modal-content ends-->
   </section> 
+
+
+<!-- Cafe Latte Modal layout --> 
 
   <section id="modal-cafe-latte" class="page">
     <div class="modal-content">
-        <span class="modal-close">&times;</span>
-      <div class="modal-layout">
 
-        <div class="animation-long">
+<!-- box 1 -->    
 
+      <div class="modal-layout1"> <!--modal-layout1 starts-->
+
+        <div class="animation-long"> <!--animation-long starts-->
           <div class="cafe-latte-cup">
             <div class="cl-cup-top-sm"></div>
             <div class="cl-cup-mid-xlg"></div>
             <div class="cl-cup-bottom-lg"></div>
             <div class="cup-handle-anime"></div>
           </div> 
-
           <div class="ingred-container-long">
             <div class="ingredient-5">Foam
               <span class="desc-rule5"></span>
@@ -299,13 +258,17 @@ OPTIONAL
               <span class="desc-rule"></span>
             </div>            
           </div>  
-        </div>
-
+        </div> <!--animation-long ends-->
      <div class="modal-label">Cafe Latte</div>            
+      </div> <!--modal-layout1 ends-->               
 
-        <div class="rule"></div>  
+<!-- box 2 -->   
 
-        <div class="desc">
+      <div class="modal-layout2"> <!--modal-layout2 starts-->
+
+      <span class="modal-close">&times;</span> <!--close button-->
+
+        <div class="description">
           <h2>Café Latte</h2>
 
           <p>A café latte, or “latte” for short, is an espresso based drink with steamed milk and micro-foam added to the coffee. This coffee is much sweeter compared to an espresso due to the steamed milk.</p>
@@ -317,20 +280,26 @@ OPTIONAL
             <li>thin layer of foam</li>
           </ul>
         </div>
-      </div>  
-      <div class="buttons">
+      </div>  <!--modal-layout2 ends-->
+ 
+      <div class="buttons"> <!-- next/prev buttons start -->
         <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)"> &#10095;</a>  
-      </div>      
-    </div> 
+      </div>  <!-- next/prev buttons ends -->       
+    
+    </div>  <!--modal-content ends-->
   </section>  
 
-  <section id="modal-flat-white" class="page">
-    <div class="modal-content">   
-        <span class="modal-close">&times;</span>
-      <div class="modal-layout">
-        <div class="animation">
 
+<!-- Flat White Modal layout --> 
+
+  <section id="modal-flat-white" class="page">
+    <div class="modal-content"> 
+
+<!-- box 1 -->          
+
+      <div class="modal-layout1"> <!--modal-layout1 starts-->
+        <div class="animation"> <!--animation starts-->
           <div class="flat-white-cup">
             <div class="fw-cup-top-sm"></div>
             <div class="fw-cup-mid-sm"></div>
@@ -338,7 +307,6 @@ OPTIONAL
             <div class="fw-cup-bottom-md"></div>
             <div class="cup-handle-anime"></div>
           </div> 
-
           <div class="ingred-container">
             <div class="ingredient-6">Foam
               <span class="desc-rule6"></span>
@@ -350,13 +318,17 @@ OPTIONAL
               <span class="desc-rule"></span>
             </div>            
           </div>  
-        </div>
+        </div> <!--animation ends-->
+     <div class="modal-label">Flat White</div>          
+      </div> <!--modal-layout1 ends-->                  
 
-     <div class="modal-label">Flat White</div>            
+<!-- box 2 -->   
 
-        <div class="rule"></div>  
+      <div class="modal-layout2"> <!--modal-layout2 starts-->
 
-        <div class="desc">
+      <span class="modal-close">&times;</span> <!--close button-->
+
+        <div class="description"> 
           <h2>Flat White</h2>
           <p>This is what some call an “Australian latte”. Generally, it’s served in a 6 to 8 ounce cup and is meant to be enjoyed with the thinnest layer of foam possible. It is important to keep the ratio of milk to espresso appropriate so as not to overpower the espresso.</p>
 
@@ -367,26 +339,32 @@ OPTIONAL
             <li>super thin layer of foam</li>
           </ul>
         </div>
-      </div> 
-      <div class="buttons">
+      </div>  <!--modal-layout2 ends-->
+ 
+      <div class="buttons"> <!-- next/prev buttons start -->
         <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)"> &#10095;</a>  
-      </div>       
-    </div> 
-  </section>  
+      </div>  <!-- next/prev buttons ends -->       
+    
+    </div>  <!--modal-content ends-->
+  </section>
+
+
+<!-- Cortado Modal layout -->     
 
   <section id="modal-cortado" class="page">
     <div class="modal-content">  
-        <span class="modal-close">&times;</span>
-      <div class="modal-layout">
-        <div class="animation-mid">
+
+<!-- box 1 -->        
+
+      <div class="modal-layout1"> <!--modal-layout1 starts-->
+        <div class="animation-mid"> <!--animation-mid starts-->
           <div class="cortado-cup">
             <div class="cor-cup-top-md"></div>
             <div class="cor-cup-mid-xlg"></div>
             <div class="cor-cup-bottom-md"></div>
             <div class="cup-handle-anime"></div>
           </div> 
-
           <div class="ingred-container-mid">
             <div class="ingredient-7">Foam infused milk
               <span class="desc-rule7"></span>
@@ -395,13 +373,18 @@ OPTIONAL
               <span class="desc-rule"></span>
             </div>            
           </div>  
-        </div>
+        </div> <!--animation-mid ends-->
+     <div class="modal-label">Cortado</div>          
+      </div> <!--modal-layout1 ends-->        
+          
 
-     <div class="modal-label">Cortado</div>            
+<!-- box 2 -->   
 
-        <div class="rule"></div>  
+      <div class="modal-layout2"> <!--modal-layout2 starts-->
 
-        <div class="desc">
+      <span class="modal-close">&times;</span> <!--close button-->
+
+        <div class="description"> 
           <h2>Cortado</h2>
           <p>The perfect afternoon drink, or for that coffee drinker who wants something strong, but needs a little milk to soften the espresso as it goes down. This drink is in between a macchiato and a cafe latte. The milk should have the consistency of a cafe latte and result in the same glassy, smooth, creamy texture as a cafe latte and cappuccino</p>
 
@@ -411,27 +394,32 @@ OPTIONAL
             <li>1/2 foam infused milk</li>
           </ul>
         </div>
-      </div>  
-      <div class="buttons">
+      </div>  <!--modal-layout2 ends-->
+ 
+      <div class="buttons"> <!-- next/prev buttons start -->
         <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)"> &#10095;</a>  
-      </div>      
-    </div> 
+      </div>  <!-- next/prev buttons ends -->       
+    
+    </div>  <!--modal-content ends-->
   </section> 
+
+
+<!-- Americano Modal layout -->   
 
   <section id="modal-americano" class="page">
     <div class="modal-content">  
-        <span class="modal-close">&times;</span>
-      <div class="modal-layout">
 
-        <div class="animation-mid">
+<!-- box 1 -->        
+
+      <div class="modal-layout1">  <!--modal-layout1 starts-->
+        <div class="animation-mid">  <!--animation-mid starts-->
           <div class="americano-cup">
             <div class="am-cup-top-md"></div>
             <div class="am-cup-mid-xlg"></div>
             <div class="am-cup-bottom-md"></div>
             <div class="cup-handle-anime"></div>
           </div> 
-
           <div class="ingred-container-mid">
             <div class="ingredient-4">Hot water
               <span class="desc-rule4"></span>
@@ -440,13 +428,18 @@ OPTIONAL
               <span class="desc-rule"></span>
             </div>            
           </div>  
-        </div>
+        </div> <!--animation-mid ends-->
+     <div class="modal-label">Americano</div>         
+      </div> <!--modal-layout1 ends-->
 
-     <div class="modal-label">Americano</div>            
 
-        <div class="rule"></div>  
-        
-        <div class="desc">
+<!-- box 2 -->   
+
+      <div class="modal-layout2"> <!--modal-layout2 starts-->
+
+      <span class="modal-close">&times;</span> <!--close button-->
+
+        <div class="description"> 
           <h2>Americano</h2>
           <p>A touch of hot fresh water and a double shot pulled long. This creates a nice bold, strong coffee taste. The espresso shot is pulled atop the hot water to ensure the consistency of the crema.</p>
 
@@ -456,26 +449,31 @@ OPTIONAL
             <li>2/3 hot water</li>
           </ul>
         </div>
-      </div> 
-      <div class="buttons">
+      </div>  <!--modal-layout2 ends-->
+ 
+      <div class="buttons"> <!-- next/prev buttons start -->
         <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)"> &#10095;</a>  
-      </div>      
-    </div> 
-  </section>   
+      </div>  <!-- next/prev buttons ends -->       
+    
+    </div>  <!--modal-content ends-->
+  </section> 
+
+<!-- Macchiato Modal layout -->     
 
   <section id="modal-macchiato" class="page">
-    <div class="modal-content">  
-        <span class="modal-close">&times;</span>
-      <div class="modal-layout">
-        <div class="animation-short">
+    <div class="modal-content"> 
+
+<!-- box 1 -->     
+
+      <div class="modal-layout1">  <!--modal-layout1 starts-->
+        <div class="animation-short"> <!--animation-short starts-->
           <div class="macchiato-cup">
             <div class="mac-cup-top-md"></div>
             <div class="mac-cup-mid-md"></div>
             <div class="mac-cup-bottom-lg"></div>
             <div class="cup-handle-anime"></div>
           </div> 
-
           <div class="ingred-container-short">
             <div class="ingredient-8">Foam
               <span class="desc-rule8"></span>
@@ -484,13 +482,19 @@ OPTIONAL
               <span class="desc-rule"></span>
             </div>            
           </div>  
-        </div>
+        </div> <!--animation-short ends-->
+     <div class="modal-label">Macchiato</div>         
+      </div> <!--modal-layout1 ends-->
 
-     <div class="modal-label">Macchiato</div>            
+           
 
-        <div class="rule"></div> 
+<!-- box 2 -->   
 
-        <div class="desc">
+      <div class="modal-layout2"> <!--modal-layout2 starts-->
+
+      <span class="modal-close">&times;</span> <!--close button-->
+
+        <div class="description"> 
           <h2>Macchiato</h2>
           <p>Sometimes called espresso macchiato, is an espresso coffee drink with a small amount of milk, usually foamed. In Italian, macchiato means "stained" or "spotted" so the literal translation of cafè macchiato is "stained coffee", or coffee with a spot of milk.</p>
 
@@ -500,20 +504,26 @@ OPTIONAL
             <li>very thin layer of foam</li>
           </ul>
         </div>
-      </div>  
-      <div class="buttons">
+      </div>  <!--modal-layout2 ends-->
+ 
+      <div class="buttons"> <!-- next/prev buttons start -->
         <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)"> &#10095;</a>  
-      </div>      
-    </div> 
+      </div>  <!-- next/prev buttons ends -->       
+    
+    </div>  <!--modal-content ends-->
   </section> 
 
 
+<!-- Red Eye Modal layout --> 
+
   <section id="modal-red-eye" class="page">
     <div class="modal-content"> 
-        <span class="modal-close">&times;</span>
-      <div class="modal-layout">
-        <div class="animation-mid">
+
+<!-- box 1 -->        
+
+      <div class="modal-layout1"> <!--modal-layout1 starts-->
+        <div class="animation-mid"> <!--animation-mid starts-->
           <div class="red-eye-cup">
             <div class="re-cup-top-sm"></div>
             <div class="re-cup-mid-xlg"></div>
@@ -529,13 +539,17 @@ OPTIONAL
               <span class="desc-rule"></span>
             </div>            
           </div>  
-        </div>
+        </div> <!--animation-mid ends-->
+     <div class="modal-label">Red Eye</div>         
+      </div> <!--modal-layout1 ends-->
+           
+<!-- box 2 -->   
 
-     <div class="modal-label">Red Eye</div>            
+      <div class="modal-layout2"> <!--modal-layout2 starts-->
 
-        <div class="rule"></div> 
-         
-        <div class="desc">
+      <span class="modal-close">&times;</span> <!--close button-->
+
+        <div class="description"> 
           <h2>Red Eye</h2>
           <p>A cup of American style drip coffee with a shot of espresso added. Also called a Shot in the Dark or an Eye Opener. Variations of the Red Eye include the Black Eye, made with two shots of espresso, and the Dead Eye, made with three shots of espresso. </p>
 
@@ -545,12 +559,14 @@ OPTIONAL
             <li>2/3 drip coffee</li>
           </ul>
         </div>
-      </div>
-      <div class="buttons">
+      </div>  <!--modal-layout2 ends-->
+ 
+      <div class="buttons"> <!-- next/prev buttons start -->
         <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)"> &#10095;</a>  
-      </div>        
-    </div> 
+      </div>  <!-- next/prev buttons ends -->       
+    
+    </div>  <!--modal-content ends-->
   </section> 
 
 <!-- Optional 
