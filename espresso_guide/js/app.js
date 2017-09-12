@@ -123,6 +123,10 @@ $(document).keydown(function (event) {
 });
 
 
+// Gestures - Hammer.min.js - left & right swipes to navigate to next slides
+
+
+
 // jQuery Escape to exit modal screen
 
 $(document).keyup(function(event) {
@@ -138,7 +142,6 @@ if (event.keyCode == 27) {
    // moc.style.display = "none";
 }
 });
-
 
 // ==== javascript closes modal on background click ====
 
@@ -171,7 +174,7 @@ window.onclick = function(event) {
         cor.style.display = "none";
     } else if (event.target == moc) {
         moc.style.display = "none";
-    }
+    } 
 }
 
 

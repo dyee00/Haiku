@@ -59,7 +59,7 @@
 /* CSS */
 
 body {
-  background-color: #D7D1C9; 
+  background-color: rgba(233,234,229,1); /* #D7D1C9 */
   font-family: sanchez, sans-serif;
   width: auto;
   margin-top: 2%;
@@ -112,7 +112,7 @@ header {
   /* border-width: 10px 10px 10px 10px;
     border-color: black;
     border-style: solid;  */
-  background-color: #D7D1C9; 
+  background-color: rgba(233,234,229,1); 
   position: relative;  
   cursor: pointer;
   margin-bottom: 7.5px;
@@ -125,7 +125,7 @@ header {
   /* border-width: 10px 10px 10px 10px; 
     border-color: black;
     border-style: solid; */
-  background-color: #D7D1C9; 
+  background-color: rgba(233,234,229,1); 
   position: relative;
   cursor: pointer;
   margin-bottom: 7.5px;
@@ -138,7 +138,7 @@ header {
   /* border-width: 10px 10px 10px 10px;
     border-color: black;
     border-style: solid;  */
-  background-color: #D7D1C9; 
+  background-color: rgba(233,234,229,1); 
   position: relative;
   cursor: pointer;
   margin-bottom: 7.5px; 
@@ -151,7 +151,7 @@ header {
   /* border-width: 10px 10px 10px 10px; 
     border-color: black;
     border-style: solid; */
-  background-color: #D7D1C9; 
+  background-color: rgba(233,234,229,1); 
   position: relative;
   cursor: pointer;
   margin-bottom: 7.5px;
@@ -164,7 +164,7 @@ header {
   /* border-width: 10px 10px 10px 10px; 
     border-color: black;
     border-style: solid; */
-  background-color: #D7D1C9; 
+  background-color: rgba(233,234,229,1); 
   position: relative;
   cursor: pointer;
   padding-top: 35px;
@@ -176,7 +176,7 @@ header {
   /* border-width: 10px 10px 10px 10px; 
     border-color: black;
     border-style: solid; */
-  background-color: #D7D1C9; 
+  background-color: rgba(233,234,229,1); 
   position: relative;
   cursor: pointer;  
   padding-top: 35px; 
@@ -188,7 +188,7 @@ header {
   /* border-width: 10px 10px 10px 10px; 
     border-color: black;
     border-style: solid; */
-  background-color: #D7D1C9; 
+  background-color: rgba(233,234,229,1); 
   position: relative;
   cursor: pointer;
   padding-top: 35px;
@@ -200,7 +200,7 @@ header {
   /* border-width: 10px 10px 10px 10px; 
     border-color: black;
     border-style: solid; */
-  background-color: #D7D1C9; 
+  background-color: rgba(233,234,229,1); 
   position: relative;
   cursor: pointer; 
   padding-top: 35px;
@@ -229,9 +229,9 @@ header {
 
 .label { /* home page cup label */
     font-family: Sanchez;
-    font-size: 1.09rem;
+    font-size: 1rem;
     font-weight: normal;
-    letter-spacing: .03rem;
+    letter-spacing: .05rem;
     text-align: center;
     padding: 1.05rem 0rem 1.5rem 0rem;
 }
@@ -394,7 +394,7 @@ header {
       radial-gradient(rgba(255,255,255,1) 15%, transparent 16%) 8px 7px,
       radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
       radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-      background-color: rgba(255,255,255,.25);
+      background-color: rgba(255,255,255,.35);
       background-size: 17px 17px;
 } 
 
@@ -603,33 +603,36 @@ header {
 
 .modal-content {
   /* background-color: #D7D1C9; */
-  background-color: red;
-  margin: 0 auto; /* 5% from the top and centered */
+  background-color: thistle;
+  margin: 0 auto; 
   border-width: 5px 5px 5px 5px; 
     border-style: solid;
     border-color: black;
   width: 79%; 
-  height: 516px;
+  height: 510px;
 }
 
 .modal-layout1 {
   width: 58%;
-    height: 516px;
+    height: 510px;
   float: left;
   background-color: #D7D1C9;
 }
 
 .modal-layout2 {
   width: 39%;
-    height: 516px;  
+    height: 510px;  
   float: left;
-  background-color: red;
+  background-color: rgba(102,255,227,.5);
   padding: 0px 10px 0px 13px;
   border-width: 0px 0px 0px 8px;
     border-color: black;
     border-style: solid;
 }
 
+#modal-show {
+  display: block; 
+}
 
 .modal-close {
   color: rgba(0,0,0,1);
@@ -709,174 +712,91 @@ header {
   text-align: center; 
 }
 
-.ingred-container, 
-.ingred-container-short,
-.ingred-container-mid,
-.ingred-container-long {
-  position: absolute;
-    left: -150px;
-    bottom: 60px;
-  width: 100%;  
-}
 
-.ingredient-1 {
+/* ======== modal ingredient description ======= */
+
+.ingredient,
+.ingredient2,
+.ingredient3,
+.ingredient4,
+.ingredient5 {
   font-family: sanchez;
-    font-size: 17px;
-    line-height: 18px; 
+    font-size: 15px;
+    line-height: 16px;
   position: absolute;
-    left: 5px;
+    left: 0px;
     bottom: 0px;
   width: 100%;   
 }
 
-.desc-rule {
-  border-top: 1px;
-    border-style: solid;
-    border-color: rgba(0,0,0,1);
-  width: 60px;
-  position: absolute; 
-    left: 80px;
-    bottom: 8px;
-} 
-
-.ingredient-2 {
-  font-family: sanchez;
-    font-size: 17px;
-    line-height: 17px; 
-  position: absolute;
-    left: 5px;
-    bottom: 80px; 
-  width: 100%;      
-}
-
-.desc-rule2 {
-  border-top: 1px;
-    border-style: solid;
-    border-color: rgba(0,0,0,1);
-  width: 25px;
-  position: absolute; 
-    left: 120px;
-    bottom: 8px;
-} 
-
-.ingredient-3 {
-  font-family: sanchez;
-    font-size: 17px;
-    line-height: 18px; 
-  position: absolute;
-    left: 5px;
-    bottom: 155px;  
-  width: 100%;         
-}
-
-.desc-rule3 {
-  border-top: 1px;
-    border-style: solid;
-    border-color: rgba(0,0,0,1);
-  width: 95px;
-  position: absolute; 
-    left: 55px;
-    bottom: 9px;
-} 
-
-.ingredient-4 {
-  font-family: sanchez;
-    font-size: 17px;
-    line-height: 18px; 
-  position: absolute;
-    left: 5px;
-    bottom: 115px;  
-  width: 100%;         
-}
-
-.desc-rule4 {
-  border-top: 1px;
-    border-style: solid;
-    border-color: rgba(0,0,0,1);
-  width: 20px;
-  position: absolute; 
-    left: 120px;
-    bottom: 8px;
-}
-
-.ingredient-5 {
-  font-family: sanchez;
-    font-size: 17px;
-    line-height: 18px; 
-  position: absolute;
-    left: 5px;
-    bottom: 200px;  
-  width: 100%;         
-}
-
+.desc-rule,
+.desc-rule2,
+.desc-rule3,
+.desc-rule4,
 .desc-rule5 {
-  border-top: 1px;
-    border-style: solid;
-    border-color: rgba(0,0,0,1);
-  width: 100px;
+  height: 0px;
+  width: 70px;
+  border-top:1.55px solid #000;
   position: absolute; 
-    left: 50px;
-    bottom: 7px;
-}
+    left: 70px;
+    bottom: 8px;  
+} 
 
-.ingredient-6 {
-  font-family: sanchez;
-    font-size: 17px;
-    line-height: 18px; 
+
+.ingred-container {
   position: absolute;
-    left: 5px;
-    bottom: 170px;  
-  width: 100%;         
+    left: 200px;
+    top: 300px;
+  width: 100%;  
 }
 
-.desc-rule6 {
-  border-top: 1px;
-    border-style: solid;
-    border-color: rgba(0,0,0,1);
-  width: 30px;
-  position: absolute; 
-    left: 90px;
-    bottom: 7px;
-}
-
-.ingredient-7 {
-  font-family: sanchez;
-    font-size: 17px;
-    line-height: 18px; 
+.ingred-container2 {
   position: absolute;
-    left: 5px;
-    bottom: 115px;  
-  width: 100%;         
+    left: 200px;
+    top: 240px;
+  width: 100%;  
 }
 
-.desc-rule7 {
-  border-top: 1px;
-    border-style: solid;
-    border-color: rgba(0,0,0,1);
-  width: 45px;
-  position: absolute; 
-    left: 90px;
-    bottom: 7px;
-}
-
-.ingredient-8 {
-  font-family: sanchez;
-    font-size: 17px;
-    line-height: 18px; 
+.ingred-container3 {
   position: absolute;
-    left: 5px;
-    bottom: 65px;  
-  width: 100%;         
+    left: 200px;
+    top: 175px;
+  width: 100%;  
 }
 
-.desc-rule8 {
-  border-top: 1px;
-    border-style: solid;
-    border-color: rgba(0,0,0,1);
-  width: 35px;
-  position: absolute; 
-    left: 90px;
-    bottom: 7px;
+.ingred-container4 {
+  position: absolute;
+    left: 200px;
+    top: 130px;
+  width: 100%;  
+}
+
+.ingred-container5 {
+  position: absolute;
+    left: 200px;
+    top: 210px;
+  width: 100%;  
+}
+
+.ingred-container6 {
+  position: absolute;
+    left: 200px;
+    top: 155px;
+  width: 100%;  
+}
+
+.ingred-container7 {
+  position: absolute;
+    left: 200px;
+    top: 225px;
+  width: 100%;  
+}
+
+.ingred-container8 {
+  position: absolute;
+    left: 200px;
+    top: 265px;
+  width: 100%;  
 }
 
 /* ========= ANIMATION ========= */
@@ -1551,49 +1471,55 @@ header {
 
 
 
-/* ==== animation - left to right ==== */
+/* ==== animation - description ==== */
 
 
-.ingred-container {
-  animation: ingred-fade 8s ease-in forwards;
-  animation-delay: 0s;
-}
-.ingred-container-short {
-  animation: ingred-fade 5s ease-in forwards;
-  animation-delay: 0s;
+.ingredient {
+  animation: ingred-fade 2s ease-in backwards;
+  animation-delay: 2.5s;
 }
 
-.ingred-container-mid {
-  animation: ingred-fade 6s ease-in forwards;
-  animation-delay: 0s;
+.ingredient2 {
+  animation: ingred-fade 2s ease-in backwards;
+  animation-delay: 3.5s;
+}
+.ingredient3 {
+  animation: ingred-fade 2s ease-in backwards;
+  animation-delay: 4.5s;
+}
+.ingredient4 {
+  animation: ingred-fade 2s ease-in backwards;
+  animation-delay: 5.5s;
+}
+.ingredient5 {
+  animation: ingred-fade 2s ease-in backwards;
+  animation-delay: 6s;
 }
 
-.ingred-container-long {
-  animation: ingred-fade 10s ease-in forwards;
-  animation-delay: 0s;
+.desc-rule {
+  animation: slidein .7s linear backwards;
+  animation-delay: 2s;
 }
 
-
-/* Cup shift animation 
-
-.animation {
-  animation: cup-shift 1s linear forwards;
-  animation-delay: 5.5s;   
-} 
-.animation-short {
-  animation: cup-shift 1s linear forwards;
-  animation-delay: 3s;   
+.desc-rule2 {
+  animation: slidein .7s linear backwards;
+  animation-delay: 3s;
 }
-.animation-mid {
-  animation: cup-shift 1s linear forwards;
-  animation-delay: 4s;   
-}
-.animation-long {
-  animation: cup-shift 1s linear forwards;
-  animation-delay: 7s;   
-}
-*/
 
+.desc-rule3 {
+  animation: slidein .7s linear backwards;
+  animation-delay: 4s;
+}
+
+.desc-rule4 {
+  animation: slidein .7s linear backwards;
+  animation-delay: 5s;
+}
+
+.desc-rule5 {
+  animation: slidein .7s linear backwards;
+  animation-delay: 3.5s;
+}
 
 
 /* ==== animation keyframes ==== */
@@ -1621,19 +1547,25 @@ header {
 
 
 @keyframes cup-shift { /* shifts cup from left to right */
-    0% { left: 0;}
-    100%{ left : 8%;}
+  0% { left: 0;}
+  100%{ left : 8%;}
 }
 
 @keyframes ingred-fade { 
-    0% { opacity: 0;}
-    40% { opacity: 0;} 
-    80% { opacity: 0;}          
-    100%{ opacity: 1;}
+  0% { opacity: 0;}         
+  100%{ opacity: 1;}
+} 
+
+@keyframes slidein {
+  from {
+    margin-left: 5%;
+    width: 0%;
+  }
+  to {
+    margin-left: 0%;
+    width: 5%;
+  }
 }
-
-
-
 
 
 
