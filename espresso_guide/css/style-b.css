@@ -63,6 +63,8 @@ body {
   font-family: sanchez, sans-serif;
   width: auto;
   margin-top: 2%;
+  background-image: url("../art/838257040.jpg");
+      background-size: 150px;
 }
 
 .main-container {
@@ -91,11 +93,25 @@ header {
     background-repeat: no-repeat;
     background-size: contain;  */
   padding-top: 0px;  
+  /* logo as bg image 
+  background-image: url("../images/logo2.svg") ; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100%;
+  */
 }
 
 .logo {
   width: 100%;
   padding: 0px 1px 0px 1px;
+  display: inline !important;
+}
+
+.logo-mobile {
+  width: 100%;
+  padding: 0px 1px 0px 1px;
+  display: none !important;
 }
 
 #coffee-cup {
@@ -106,7 +122,12 @@ header {
     flex-wrap: wrap; 
 }
 
-.espresso {
+/* row 1 */
+
+.espresso,
+.cappuccino,
+.cafe-latte,
+.flat-white {
   width: 24.5%;
   height: auto;         
   /* border-width: 10px 10px 10px 10px;
@@ -119,93 +140,22 @@ header {
   padding-top: 35px;
 } 
 
-.cappuccino {
-  width: 24.5%;
-  height: auto;         
-  /* border-width: 10px 10px 10px 10px; 
-    border-color: black;
-    border-style: solid; */
-  background-color: rgba(233,234,229,1); 
-  position: relative;
-  cursor: pointer;
-  margin-bottom: 7.5px;
-  padding-top: 35px;
-}
- 
-.cafe-latte {
+/* row 2 */
+
+.cortado,
+.americano,
+.macchiato,
+.red-eye {
   width: 24.5%;
   height: auto;         
   /* border-width: 10px 10px 10px 10px;
     border-color: black;
     border-style: solid;  */
   background-color: rgba(233,234,229,1); 
-  position: relative;
-  cursor: pointer;
-  margin-bottom: 7.5px; 
-  padding-top: 35px;  
-}
- 
-.flat-white {
-  width: 24.5%;
-  height: auto;          
-  /* border-width: 10px 10px 10px 10px; 
-    border-color: black;
-    border-style: solid; */
-  background-color: rgba(233,234,229,1); 
-  position: relative;
-  cursor: pointer;
-  margin-bottom: 7.5px;
-  padding-top: 35px;    
-}
- 
-.cortado {
-  width: 24.5%;
-  height: auto;       
-  /* border-width: 10px 10px 10px 10px; 
-    border-color: black;
-    border-style: solid; */
-  background-color: rgba(233,234,229,1); 
-  position: relative;
+  position: relative;  
   cursor: pointer;
   padding-top: 35px;
-}
-
-.americano {
-  width: 24.5%;
-  height: auto;         
-  /* border-width: 10px 10px 10px 10px; 
-    border-color: black;
-    border-style: solid; */
-  background-color: rgba(233,234,229,1); 
-  position: relative;
-  cursor: pointer;  
-  padding-top: 35px; 
-}
-
-.macchiato {
-  width: 24.5%;
-  height: auto;          
-  /* border-width: 10px 10px 10px 10px; 
-    border-color: black;
-    border-style: solid; */
-  background-color: rgba(233,234,229,1); 
-  position: relative;
-  cursor: pointer;
-  padding-top: 35px;
-}
-
-.red-eye {
-  width: 24.5%;
-  height: auto;         
-  /* border-width: 10px 10px 10px 10px; 
-    border-color: black;
-    border-style: solid; */
-  background-color: rgba(233,234,229,1); 
-  position: relative;
-  cursor: pointer; 
-  padding-top: 35px;
-}
- 
+}  
 
 .clearfix {
   width: 24%;
@@ -595,11 +545,10 @@ header {
     top: 190px;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: hidden; /* auto - to enable scroll if needed */
   /* background-color: rgb(0,0,0); Fallback color 
   background-color: rgba(0,0,0,0.7); Black w/ opacity */
 }
-
 
 .modal-content {
   /* background-color: #D7D1C9; */
@@ -666,8 +615,6 @@ header {
 
 
 
-
-
 /* Next & previous buttons */
 
  
@@ -683,7 +630,7 @@ header {
     bottom: 80px;
 }
 
-/* Position the "next button" to the right */
+  /* Position the "next button" to the right */
 
 .previous {
   float: left;
@@ -697,7 +644,7 @@ header {
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+  /* On hover, add a black background color with a little bit see-through */
 .previous:hover, .next:hover {
   /* background-color: rgba(0,0,0,0.8); */
   color: rgba(255,255,255,.5);
@@ -715,25 +662,29 @@ header {
 
 /* ======== modal ingredient description ======= */
 
-.ingredient,
-.ingredient2,
-.ingredient3,
-.ingredient4,
-.ingredient5 {
+
+.ingredient {
   font-family: sanchez;
     font-size: 15px;
-    line-height: 16px;
+    line-height: 16px;   
   position: absolute;
     left: 0px;
     bottom: 0px;
-  width: 100%;   
+  width: 4.5%; 
+  text-align: left;
 }
 
 .desc-rule,
+.desc-rule1,
 .desc-rule2,
 .desc-rule3,
 .desc-rule4,
-.desc-rule5 {
+.desc-rule5,
+.desc-rule6,
+.desc-rule7,
+.desc-rule8,
+.desc-rule9,
+.desc-rule10  {
   height: 0px;
   width: 70px;
   border-top:1.55px solid #000;
@@ -742,62 +693,6 @@ header {
     bottom: 8px;  
 } 
 
-
-.ingred-container {
-  position: absolute;
-    left: 200px;
-    top: 300px;
-  width: 100%;  
-}
-
-.ingred-container2 {
-  position: absolute;
-    left: 200px;
-    top: 240px;
-  width: 100%;  
-}
-
-.ingred-container3 {
-  position: absolute;
-    left: 200px;
-    top: 175px;
-  width: 100%;  
-}
-
-.ingred-container4 {
-  position: absolute;
-    left: 200px;
-    top: 130px;
-  width: 100%;  
-}
-
-.ingred-container5 {
-  position: absolute;
-    left: 200px;
-    top: 210px;
-  width: 100%;  
-}
-
-.ingred-container6 {
-  position: absolute;
-    left: 200px;
-    top: 155px;
-  width: 100%;  
-}
-
-.ingred-container7 {
-  position: absolute;
-    left: 200px;
-    top: 225px;
-  width: 100%;  
-}
-
-.ingred-container8 {
-  position: absolute;
-    left: 200px;
-    top: 265px;
-  width: 100%;  
-}
 
 /* ========= ANIMATION ========= */
 
@@ -823,6 +718,7 @@ header {
 
 
 /* === espresso === */
+
 
 .esp-cup-top-md {
     border-style: solid;
@@ -870,6 +766,24 @@ header {
     animation-delay: .5s; 
 } 
 
+
+.esp-ingred-container {
+  position: absolute;
+    left: 200px;
+    top: 50px;
+  width: 100%;
+  height: 250px;
+}
+    .ingredient {
+      animation: ingred-fade .7s ease-in backwards;
+      animation-delay: 3s;
+    }
+    .desc-rule {
+      animation: slidein .7s linear backwards;
+      animation-delay: 2s;
+    }
+
+
 /* === cappuccino === */
 
 .cap-cup-top-lg {
@@ -898,8 +812,8 @@ header {
       background-size: 17px 17px;
     width: 100%;
     bottom: 0; 
-    animation: brew2 1.5s linear forwards;
-    animation-delay: 3.5s; 
+    animation: brew 1.5s linear forwards;
+    animation-delay: 6s; 
 }
 
 .cap-cup-mid-md {
@@ -919,7 +833,7 @@ header {
     width: 100%;
     bottom: 0; 
     animation: brew 1.5s linear forwards;
-    animation-delay: 2s; 
+    animation-delay: 3.5s; 
 }
 
 .cap-cup-bottom-lg {
@@ -945,6 +859,39 @@ header {
     animation: brew 1.5s linear forwards;
     animation-delay: .5s; 
 } 
+
+.cap-ingred-container1 {
+  position: absolute;
+    left: 200px;
+    top: 200px;
+  width: 100%;
+}
+      .ingredient1 {
+        animation: ingred-fade .7s ease-in backwards;
+        animation-delay: 6s;
+      }
+      .desc-rule1 {
+        animation: slidein .7s linear backwards;
+        animation-delay: 5s;
+      }
+
+.cap-ingred-container2 {
+  position: absolute;
+    left: 200px;
+    top: 140px;
+  width: 100%;
+}
+      .ingredient2 {
+        animation: ingred-fade .7s ease-in backwards;
+        animation-delay: 8s;
+      }
+      .desc-rule2 {
+        animation: slidein .7s linear backwards;
+        animation-delay: 7.5s;
+      }
+
+
+
 
 /* === cafe latte === */
 
@@ -974,8 +921,8 @@ header {
       background-size: 17px 17px;
     width: 100%;
     bottom: 0; 
-    animation: brew 3s linear forwards;
-    animation-delay: 3.5s; 
+    animation: brew 1s linear forwards;
+    animation-delay: 6.5s; 
 }
 
 .cl-cup-mid-xlg {
@@ -995,7 +942,7 @@ header {
     width: 100%;
     bottom: 0; 
     animation: brew 1.5s linear forwards;
-    animation-delay: 2s; 
+    animation-delay: 3.5s; 
 }
 
 .cl-cup-bottom-lg {
@@ -1021,6 +968,37 @@ header {
   animation: brew 1.5s linear forwards;
   animation-delay: .5s; 
 } 
+
+.cl-ingred-container1 {
+  position: absolute;
+    left: 200px;
+    top: 175px;
+  width: 100%;
+}
+      .ingredient3 {
+        animation: ingred-fade 1s ease-in backwards;
+        animation-delay: 6s;
+      }
+      .desc-rule3 {
+        animation: slidein .7s linear backwards;
+        animation-delay: 5s;
+      }
+
+.cl-ingred-container2 {
+  position: absolute;
+    left: 200px;
+    top: 110px;
+  width: 100%;
+}
+      .ingredient4 {
+        animation: ingred-fade 1s ease-in backwards;
+        animation-delay: 9s;
+      }
+      .desc-rule4 {
+        animation: slidein .7s linear backwards;
+        animation-delay: 8.5s;
+      }
+
 
 /* === flat white === */
 
@@ -1060,8 +1038,8 @@ header {
       background-size: 17px 17px; 
     width: 100%;
     bottom: 0; 
-    animation: brew2 1.5s linear forwards;
-    animation-delay: 3.5s; 
+    animation: brew2 1s linear forwards;
+    animation-delay: 7s; 
 }
 
 .fw-cup-mid-xlg {
@@ -1081,7 +1059,7 @@ header {
     width: 100%;
     bottom: 0; 
     animation: brew 1.5s linear forwards;
-    animation-delay: 2s; 
+    animation-delay: 3.5s; 
 }
 
 .fw-cup-bottom-md {
@@ -1107,6 +1085,36 @@ header {
     animation: brew 1.5s linear forwards;
     animation-delay: .5s; 
 } 
+
+.fw-ingred-container1 {
+  position: absolute;
+    left: 200px;
+    top: 175px;
+  width: 100%;
+}
+      .ingredient5 {
+        animation: ingred-fade .7s ease-in backwards;
+        animation-delay: 6s;
+      }
+      .desc-rule5 {
+        animation: slidein .7s linear backwards;
+        animation-delay: 5s;
+      }
+
+.fw-ingred-container2 {
+  position: absolute;
+    left: 200px;
+    top: 130px;
+  width: 100%;
+}
+      .ingredient6 {
+        animation: ingred-fade .7s ease-in backwards;
+        animation-delay: 8.5s;
+      }
+      .desc-rule6 {
+        animation: slidein .7s linear backwards;
+        animation-delay: 8s;
+      }
 
 
 /* === cortado === */
@@ -1150,7 +1158,7 @@ header {
     width: 100%;
     bottom: 0; 
     animation: brew 1.5s linear forwards;
-    animation-delay: 2s; 
+    animation-delay: 3.5s; 
 }
 
 .cor-cup-bottom-md {
@@ -1176,6 +1184,21 @@ header {
     animation: brew 1.5s linear forwards;
     animation-delay: .5s; 
 } 
+
+.cor-ingred-container1 {
+  position: absolute;
+    left: 200px;
+    top: 155px;
+  width: 100%;
+}
+      .ingredient7 {
+        animation: ingred-fade .7s ease-in backwards;
+        animation-delay: 6.5s;
+      }
+      .desc-rule7 {
+        animation: slidein .7s linear backwards;
+        animation-delay: 5.5s;
+      }
 
 /* === americano === */
 
@@ -1210,7 +1233,7 @@ header {
     width: 100%;
     bottom: 0; 
     animation: brew 1.5s linear forwards;
-    animation-delay: 2s; 
+    animation-delay: 3.5s; 
 }
 
 .am-cup-bottom-md {
@@ -1235,7 +1258,23 @@ header {
     bottom: 0; 
     animation: brew 1.5s linear forwards;
     animation-delay: .5s; 
-} 
+}
+
+.am-ingred-container1 {
+  position: absolute;
+    left: 200px;
+    top: 175px;
+  width: 100%;
+}
+      .ingredient8 {
+        animation: ingred-fade .7s ease-in backwards;
+        animation-delay: 6.5s;
+      }
+      .desc-rule8 {
+        animation: slidein .7s linear backwards;
+        animation-delay: 5.5s;
+      }
+
 
 
 /* === macchiato === */
@@ -1277,8 +1316,8 @@ header {
       background-size: 17px 17px;
     width: 100%;
     bottom: 0; 
-    animation: brew3 1.5s linear forwards;
-    animation-delay: 2s; 
+    animation: brew3 1s linear forwards;
+    animation-delay: 3.5s; 
 }
 
 .mac-cup-bottom-lg {
@@ -1303,7 +1342,23 @@ header {
     bottom: 0; 
     animation: brew 1.5s linear forwards;
     animation-delay: .5s; 
-} 
+}
+
+.mac-ingred-container1 {
+  position: absolute;
+    left: 200px;
+    top: 240px;
+  width: 100%;
+}
+      .ingredient9 {
+        animation: ingred-fade .7s ease-in backwards;
+        animation-delay: 6s;
+      }
+      .desc-rule9 {
+        animation: slidein .7s linear backwards;
+        animation-delay: 5s;
+      }
+
 
 /* === red eye === */
 
@@ -1338,7 +1393,7 @@ header {
     width: 100%;
     bottom: 0; 
     animation: brew 1.5s linear forwards;
-    animation-delay: 2s; 
+    animation-delay: 3.5s; 
 }
 
 .re-cup-bottom-md {
@@ -1365,6 +1420,20 @@ header {
     animation-delay: .5s; 
 } 
 
+.re-ingred-container1 {
+  position: absolute;
+    left: 200px;
+    top: 170px;
+  width: 100%;
+}
+      .ingredient10 {
+        animation: ingred-fade .7s ease-in backwards;
+        animation-delay: 6s;
+      }
+      .desc-rule10 {
+        animation: slidein .7s linear backwards;
+        animation-delay: 5s;
+      }
 
 /* === mocha === */
 
@@ -1471,57 +1540,6 @@ header {
 
 
 
-/* ==== animation - description ==== */
-
-
-.ingredient {
-  animation: ingred-fade 2s ease-in backwards;
-  animation-delay: 2.5s;
-}
-
-.ingredient2 {
-  animation: ingred-fade 2s ease-in backwards;
-  animation-delay: 3.5s;
-}
-.ingredient3 {
-  animation: ingred-fade 2s ease-in backwards;
-  animation-delay: 4.5s;
-}
-.ingredient4 {
-  animation: ingred-fade 2s ease-in backwards;
-  animation-delay: 5.5s;
-}
-.ingredient5 {
-  animation: ingred-fade 2s ease-in backwards;
-  animation-delay: 6s;
-}
-
-.desc-rule {
-  animation: slidein .7s linear backwards;
-  animation-delay: 2s;
-}
-
-.desc-rule2 {
-  animation: slidein .7s linear backwards;
-  animation-delay: 3s;
-}
-
-.desc-rule3 {
-  animation: slidein .7s linear backwards;
-  animation-delay: 4s;
-}
-
-.desc-rule4 {
-  animation: slidein .7s linear backwards;
-  animation-delay: 5s;
-}
-
-.desc-rule5 {
-  animation: slidein .7s linear backwards;
-  animation-delay: 3.5s;
-}
-
-
 /* ==== animation keyframes ==== */
 
 
@@ -1582,142 +1600,93 @@ header {
 
 @media screen 
   and (min-width: 240px)
-  and (max-width: 768px) {
+  and (max-width: 414px) {
 
 
-  .container {  
-    display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center; 
-      flex-wrap: wrap;
-    width: 275px;
-    margin: 0 auto;
-    padding: 0 auto;
-  }
+.main-container {
+  background-color: rgba(0,0,0,1); 
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; 
+  border: 8px solid black;
 
- header {
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;   
+}
+
+header {
   width: 100%;
-  height: 150px;
+  height: auto;
   background-color: rgba(0,0,0,1);
-  border-bottom: 10px solid black;
+  border-bottom: 8px solid black;
   text-align: center;
-  background-image: url("../images/logo.svg");
+  /* background-image: url("../images/logo.svg");
     background-repeat: no-repeat;
-    background-size: cover;   
+    background-size: contain;  */
+  padding-top: 0px;
+
 }
 
-/* ====== TEXT ====== */
-
-  #title {
-    font-family: Blackout Midnight; 
-    font-size: 60px;
-    color: black;
-    text-align: center;
-    line-height: 6rem;
-  }
-
-  .label { /* home page cup label */
-    font-family: Sanchez;
-    font-size: 1.25rem;
-    font-weight: normal;
-    text-align: center;
-    padding: 1rem 0rem 1rem 0rem;
+.logo {
+  width: 100%;
+  padding: 0px 1px 0px 1px;
+  display: none !important;
 }
 
-
-
-
-
-/* ====== COFFEE CUP ====== */
+.logo-mobile {
+  width: 100%;
+  padding: 0px 1px 0px 1px;
+  display: inline !important;
+}
 
 #coffee-cup {
-    width: 275px;
-    height: 280px;
-    display: inline-block;            
-    border: 3px solid black;
-    margin-left: -3px;
-    margin-bottom: -3px;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
 }
 
+/* row 1 */
 
-.cup-top {
-    border-style: solid;
+.espresso,
+.cappuccino,
+.cafe-latte,
+.flat-white,
+.cortado,
+.americano,
+.macchiato,
+.red-eye  {
+  width: 100%;
+  height: auto;         
+  /* border-width: 10px 10px 10px 10px;
     border-color: black;
-    border-width: 8px 8px 0px 8px;
-    width: 150px; 
-    height: 40px; 
-    -webkit-border-top-right-radius: 35px;
-    -webkit-border-top-left-radius: 35px;    
-    -webkit-border-bottom-right-radius: 0px;
-    -webkit-border-bottom-left-radius: 0px;
-    position: relative;
-    overflow: hidden;    
-}
+    border-style: solid;  */
+  background-color: rgba(233,234,229,1); 
+  position: relative;  
+  cursor: pointer;
+  margin-bottom: 9.5px;
+  padding-top: 35px;
+} 
 
-.cup-mid1 {
-    border-style: solid;
-    border-color: black;
-    border-width: 0px 8px 0px 8px;
-    width: 150px;
-    height: 40px;
-    position: relative;
-    overflow: hidden;    
-}
+ .clearfix {
+  width: 24%;
+  content: "";
+  display: hidden;
+  clear: both;
+} 
 
-.cup-mid2 {
-    border-style: solid;
-    border-color: black;
-    border-width: 0px 8px 0px 8px;
-    width: 150px;
-    height: 40px;
-    position: relative;
-    overflow: hidden;    
-}
-
-.cup-bottom {
-    border-style: solid;
-    border-color: black;
-    border-width: 0px 8px 8px 8px;
-    width: 150px;
-    height: 40px;
-    -webkit-border-top-right-radius: 0px;
-    -webkit-border-top-left-radius: 0px;    
-    -webkit-border-bottom-right-radius: 75px;
-    -webkit-border-bottom-left-radius: 75px;
-    position: relative;
-    overflow: hidden;    
-}
-
-
-/* Handle */
-
-.cup-handle {
-  border-style: solid;
-  border-color: black;
-  border-width: 8px 8px 8px 8px;
-    -webkit-border-top-left-radius: 30px;
-    -webkit-border-top-right-radius: 70px;
-    -webkit-border-bottom-right-radius: 70px;
-    -webkit-border-bottom-left-radius: 30px;
-  width: 30px;
-  height: 45px;
-
-  position: absolute; 
-    left: 211px;
-    bottom: 150px;   
-  overflow: hidden;
-}
+@media screen 
+  and (min-width: 568px)
+  and (max-width: 1024px) {
 
 
 }
-
-
-
-
-
-
-
 
 
 
