@@ -63,8 +63,8 @@ body {
   font-family: sanchez, sans-serif;
   width: auto;
   margin-top: 2%;
-  background-image: url("../art/838257040.jpg");
-      background-size: 150px;
+  /* background-image: url("../art/838257040.jpg");
+      background-size: 150px; */
 }
 
 .main-container {
@@ -1600,7 +1600,7 @@ header {
 
 @media screen 
   and (min-width: 240px)
-  and (max-width: 414px) {
+  and (max-width: 568px) { /* mobile styling start */
 
 
 .main-container {
@@ -1609,6 +1609,7 @@ header {
   height: auto;
   margin: 0 auto;
   position: relative;
+    top: 20px;
   overflow: hidden; 
   border: 10px solid black;
 
@@ -1685,9 +1686,9 @@ header {
   padding-top: 35px;
 } 
 
-/* ====== Modal ====== */
+/* ====== Modal - mobile  ====== */
 
- 
+
 #modal-espresso, 
 #modal-cappuccino, 
 #modal-cafe-latte, 
@@ -1698,44 +1699,43 @@ header {
 #modal-cortado, 
 #modal-mocha {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
+  position: absolute; /* Stay in place */
     z-index: 1; /* Sit on top */
-    left: 20px;
-    top: 100px;
-  width: 90%; /* Full width */
+    left: 0px;
+    top: 130px;
+  width: 100%; /* Full width */
   height: auto; /* Full height */
   overflow: auto; /* auto - to enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgb(0,0,0); /* Fallback color */  
   background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  padding-top: 35px;
 }
 
 .modal-content {
   /* background-color: #D7D1C9; */
   background-color: thistle;
   margin: 0 auto; 
-  border-width: 5px 5px 5px 5px; 
+  /* border-width: 5px 5px 5px 5px; 
     border-style: solid;
-    border-color: black;
-  width: 80%; 
-  height: auto;
+    border-color: black; */
+  width: 90%; 
+  border: none;
 }
 
 .modal-layout1 {
-  width: auto;
+  width: 100%;
     height: auto;
-  float: left;
   background-color: #D7D1C9;
+  border: none;
 }
 
 .modal-layout2 {
-  width: auto;
+  width: 100%;
     height: auto;  
-  float: left;
-  background-color: rgba(102,255,227,.5);
-  padding: 0px 10px 0px 13px;
-  border-width: 0px 0px 0px 8px;
-    border-color: black;
-    border-style: solid;
+  background-color: #D7D1C9;
+  border: none;
+  padding: 0px;
+  margin: 0px;
 }
 
 #modal-show {
@@ -1744,10 +1744,12 @@ header {
 
 .modal-close {
   color: rgba(0,0,0,1);
-  float: right;
   font-size: 50px;
   font-weight: bold;
   cursor: pointer;
+  position: relative;
+    top: -275px;
+    right: 30px;
 }
 
 .modal-close:hover,
@@ -1765,13 +1767,13 @@ header {
     flex-direction: column; 
     align-items: center;
     justify-content: center;
-  padding-top: 80px; /* firefox needs to be in px, not % */
+  padding-top: 50px; /* firefox needs to be in px, not % */
 }
 
 .description {
-  padding: 15px;
+  padding: 25px;
+  font-size: 15px;
 }
-
 
 
 /* Next & previous buttons */
@@ -1795,7 +1797,7 @@ header {
   float: left;
   border-radius: 0 3px 3px 0;
   position: relative;
-    left: 675px;
+    left: 10px;
 }
 
 .next {
@@ -1811,6 +1813,187 @@ header {
 
 
 
+/* ========= ANIMATION - Mobile ========= */
+
+.cup-handle-anime {
+    position: absolute;
+      /*left: 282px;*/
+      top: 80px;
+ 
+    width: 25px;
+    height: 40px;
+
+    border-style: solid;
+    border-color: black;
+    border-width: 7px;  
+    -webkit-border-top-left-radius: 30px;
+    -webkit-border-top-right-radius: 70px;
+    -webkit-border-bottom-right-radius: 70px;
+    -webkit-border-bottom-left-radius: 30px;
+    
+    margin-left: 135px;
+    overflow: hidden;
+}
+
+
+/* === espresso === */
+
+
+.esp-cup-top-md {
+    border-style: solid;
+    border-color: black;
+    border-width: 8px 8px 0px 8px;
+    width: 125px; 
+    height: 42.5px; 
+    -webkit-border-top-right-radius: 25px;
+    -webkit-border-top-left-radius: 25px;    
+    -webkit-border-bottom-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    position: relative;
+}
+
+.esp-cup-mid-md {
+    border-style: solid;
+    border-color: black;
+    border-width: 0px 8px 0px 8px;
+    width: 125px;
+    height: 42.5px;
+    position: relative;
+}
+
+.esp-cup-bottom-lg {
+    border-style: solid;
+    border-color: black;
+    border-width: 0px 8px 8px 8px;
+    width: 125px;
+    height: 55px;
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-top-left-radius: 0px;    
+    -webkit-border-bottom-right-radius: 40px;
+    -webkit-border-bottom-left-radius: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.esp-cup-bottom-lg::before {
+    content: '';
+    position: absolute;
+    background: rgba(40,23,0,1.0); /* espresso color */
+    width: 100%;
+    bottom: 0; 
+    animation: brew 1.5s linear forwards;
+    animation-delay: .5s; 
+} 
+
+ 
+.esp-ingred-container {
+  position: absolute;
+    left: 80px;
+    top: 10px;
+  width: 100%;
+  height: 250px;
+}
+    .ingredient {
+      animation: ingred-fade .7s ease-in backwards;
+      animation-delay: 3s;
+    }
+    .desc-rule {
+      animation: slidein .7s linear backwards;
+      animation-delay: 2s;
+    }
+
+
+
+
+
+
+
+
+
+} /* mobile styling ends */
+
+@media screen 
+  and (min-width: 568px)
+  and (max-width: 760px) { /* mobile styling start */
+
+.main-container {
+  background-color: rgba(0,0,0,1); 
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+    top: 20px;
+  overflow: hidden; 
+  border: 12px solid black;
+
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;   
+}
+
+header {
+  width: 100%;
+  height: auto;
+  background-color: rgba(0,0,0,1);
+  border-bottom: 8px solid black;
+  text-align: center;
+  /* background-image: url("../images/logo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;  */
+  padding-bottom: 5px;
+
+}
+
+.logo {
+  width: 100%;
+  padding: 0px 1px 0px 1px;
+  display: none !important;
+}
+
+.logo-mobile {
+  width: 100%;
+  padding: 0px 1px 0px 1px;
+  display: inline !important;
+}
+
+#coffee-cup {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+/* row 1 */
+
+.espresso,
+.cappuccino,
+.cafe-latte,
+.flat-white,
+.cortado,
+.americano {
+  width: 48.5%;
+  height: auto;         
+  background-color: rgba(233,234,229,1); 
+  position: relative;  
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding-top: 35px;
+} 
+.macchiato,
+.red-eye  {
+  width: 48.5%;
+  height: auto;         
+  background-color: rgba(233,234,229,1); 
+  position: relative;  
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding-top: 35px;
+} 
+
+} /* mobile styling ends */
 
 
 
