@@ -75,6 +75,7 @@ body {
   position: relative;
   overflow: hidden; 
   border: 8px solid black;
+  border-bottom: 0px; 
 
   display: flex;
     flex-direction: row;
@@ -2595,7 +2596,7 @@ header {  /* mobile */
   position: relative;
     top: 20px;
   overflow: hidden; 
-  border: 12px solid black;
+  border: 12px solid black; 
 
   display: flex;
     flex-direction: row;
@@ -2684,9 +2685,10 @@ header { /* mobile */
   height: auto;
   margin: 0 auto;
   position: relative;
-    top: 20px;
+    top: 40px;
   overflow: hidden; 
   border: 12px solid black;
+    border-bottom: 0px; 
 
   display: flex;
     flex-direction: row;
@@ -2736,7 +2738,7 @@ header { /* mobile */
 .macchiato,
 .red-eye,
 .mocha { /* mobile */
-  width: 50%;
+  width: 48.5%;
   height: auto;         
   background-color: rgba(233,234,229,1); 
   position: relative;  
@@ -2937,6 +2939,235 @@ header { /* mobile */
 
 
 } /* mobile styling ends */
+
+
+
+
+
+/* mobile styling start - tablet size - 1024px only */
+
+@media screen 
+  and (min-width: 1024px)
+  and (max-width: 1024px) {
+
+.main-container { /* mobile */
+  background-color: rgba(0,0,0,1); 
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+    top: 40px;
+  overflow: hidden; 
+  border: 12px solid black;
+  border-bottom: 0px;
+
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;   
+}
+
+header { /* mobile */
+  width: 100%;
+  height: auto;
+  background-color: rgba(0,0,0,1);
+  border-bottom: 8px solid black;
+  text-align: center;
+  padding-bottom: 5px;
+
+}
+
+.logo { /* mobile */
+  width: 100%;
+  padding: 0px 1px 0px 1px;
+  display: inline !important;
+}
+
+.logo-mobile { /* mobile */
+  width: 100%;
+  padding: 0px 1px 0px 1px;
+  display: none !important;
+}
+
+#coffee-cup { /* mobile */
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+/* row 1 */
+
+.espresso,
+.cappuccino,
+.cafe-latte,
+.flat-white,
+.cortado,
+.americano,
+.macchiato,
+.red-eye,
+.mocha { /* mobile */
+  width: 49%;
+  height: auto;         
+  background-color: rgba(233,234,229,1); 
+  position: relative;  
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding-top: 35px;
+} 
+.dummy  { /* mobile */
+  width: 32.2%;
+  height: auto;         
+  background-color: rgba(233,234,229,1); 
+  position: relative;  
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding-top: 35px;
+} 
+
+.clearfix { /* mobile */
+  width: 24%;
+  content: "";
+  display: hidden;
+  clear: both;
+} 
+
+/* ====== Modal ====== */
+
+ 
+#modal-espresso, 
+#modal-cappuccino, 
+#modal-cafe-latte, 
+#modal-flat-white, 
+#modal-americano,
+#modal-red-eye, 
+#modal-macchiato,
+#modal-cortado, 
+#modal-mocha { /* mobile */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0px;
+    top: 0px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* auto - to enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+.modal-content { /* mobile */
+  /* background-color: #D7D1C9; */
+  background-color: thistle;
+  margin: 0 auto; 
+  width: 90%; 
+  border: none;
+  position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.modal-layout1 { /* mobile */
+  width: 100%;
+    height: auto;
+  background-color: #D7D1C9;
+  border: none;
+}
+
+.modal-layout2 { /* mobile */
+  width: 100%;
+    height: auto;  
+  background-color: #D7D1C9;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+#modal-show { /* mobile */
+  display: block; 
+}
+
+.modal-close { /* mobile */
+  color: rgba(0,0,0,1);
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+    top: -410px;
+    right: 40px;
+}
+
+.modal-close:hover,
+.modal-close:focus { /* mobile */
+  color: rgba(255,255,255,.5);
+  text-decoration: none;
+  cursor: pointer;  
+}
+
+.animation,
+.animation-short,
+.animation-mid,
+.animation-long { /* mobile */
+  display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+  padding-top: 50px; /* firefox needs to be in px, not % */
+}
+
+.description { /* mobile */
+  padding: 25px;
+  font-size: 18px;
+}
+
+
+
+/* Next & previous buttons */
+
+ 
+.buttons { /* mobile */
+  cursor: pointer; 
+  width: auto;
+  padding: 16px;
+  color: rgba(0,0,60,1);
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  position: relative;
+    bottom: 80px;
+    right: 55px;
+}
+
+  /* Position the "next button" to the right */
+
+.previous { /* mobile */
+  float: left;
+  border-radius: 0 3px 3px 0;
+  position: relative;
+    left: 500px;
+}
+
+.next { /* mobile */
+  float: right;
+  border-radius: 3px 0 0 3px;
+}
+
+  /* On hover, add a black background color with a little bit see-through */
+.previous:hover, .next:hover { /* mobile */
+  /* background-color: rgba(0,0,0,0.8); */
+  color: rgba(255,255,255,.5);
+}
+
+/* ======== modal text ======= */
+
+.modal-label { /* mobile */
+  font-family: sanchez;
+    font-size: 25px;
+  padding-top: 30px; 
+  text-align: center; 
+}
 
 
 
