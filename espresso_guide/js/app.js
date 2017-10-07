@@ -181,11 +181,11 @@ window.onclick = function(event) {
 // ==== freezes body scroll when modal is opened 
 
 
-$("#modal-espresso").on("fadeIn", function () {
-  $("body").addClass("#modal-open");
-}).on("fadeOut", function () {
-  $("body").removeClass("#modal-open")
-});
+// $("#modal-espresso").on("fadeIn", function () {
+//   $("body").addClass("#modal-open");
+// }).on("fadeOut", function () {
+//   $("body").removeClass("#modal-open")
+// });
 
 
 

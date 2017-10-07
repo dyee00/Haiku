@@ -2680,7 +2680,7 @@ header { /* mobile */
 
 .main-container { /* mobile */
   background-color: rgba(0,0,0,1); 
-  width: 95%;
+  width: 80%;
   height: auto;
   margin: 0 auto;
   position: relative;
@@ -2736,7 +2736,7 @@ header { /* mobile */
 .macchiato,
 .red-eye,
 .mocha { /* mobile */
-  width: 32.2%;
+  width: 50%;
   height: auto;         
   background-color: rgba(233,234,229,1); 
   position: relative;  
