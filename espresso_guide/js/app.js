@@ -8,7 +8,7 @@ $(".espresso").click(function() { 	// Modal Open
 });
 
 $(".modal-close").click(function(event) {  // Modal Close
-	$("#modal-espresso").hide("#modal-show");
+	$("#modal-espresso").fadeOut("#modal-show");
 });
 
 
@@ -17,7 +17,7 @@ $(".cappuccino").click(function() {   // Modal Open
 });
 
 $(".modal-close").click(function(event) { // Modal Close
-	$("#modal-cappuccino").hide("#modal-show");
+	$("#modal-cappuccino").fadeOut("#modal-show");
 });
 
 
@@ -26,7 +26,7 @@ $(".cafe-latte").click(function() {   // Modal Open
 });
 
 $(".modal-close").click(function(event) { // Modal Close
-	$("#modal-cafe-latte").hide("#modal-show");
+	$("#modal-cafe-latte").fadeOut("#modal-show");
 });
 
 
@@ -35,7 +35,7 @@ $(".flat-white").click(function() {   // Modal Open
 });
 
 $(".modal-close").click(function(event) { // Modal Close
-	$("#modal-flat-white").hide("#modal-show");
+	$("#modal-flat-white").fadeOut("#modal-show");
 });
 
 
@@ -44,7 +44,7 @@ $(".americano").click(function() {  // Modal Open
 });
 
 $(".modal-close").click(function(event) { // Modal Close
-	$("#modal-americano").hide("#modal-show");
+	$("#modal-americano").fadeOut("#modal-show");
 });
 
 
@@ -53,7 +53,7 @@ $(".red-eye").click(function() {   // Modal Open
 });
 
 $(".modal-close").click(function(event) { // Modal Close
-	$("#modal-red-eye").hide("#modal-show");
+	$("#modal-red-eye").fadeOut("#modal-show");
 });
 
 
@@ -62,7 +62,7 @@ $(".macchiato").click(function() {  // Modal Open
 });
 
 $(".modal-close").click(function(event) { // Modal Close
-	$("#modal-macchiato").hide("#modal-show");
+	$("#modal-macchiato").fadeOut("#modal-show");
 });
 
 
@@ -71,7 +71,7 @@ $(".cortado").click(function() {  // Modal Open
 });
 
 $(".modal-close").click(function(event) { // Modal Close
-	$("#modal-cortado").hide("#modal-show");
+	$("#modal-cortado").fadeOut("#modal-show");
 });
 
 
@@ -80,7 +80,7 @@ $(".mocha").click(function() {  // Modal Open
 });
 
 $(".modal-close").click(function(event) { // Modal Close
-	$("#modal-mocha").hide("#modal-show");
+	$("#modal-mocha").fadeOut("#modal-show");
 });
 
 
@@ -177,6 +177,15 @@ window.onclick = function(event) {
     } 
 }
 
+
+// ==== freezes body scroll when modal is opened 
+
+
+$("#modal-espresso").on("fadeIn", function () {
+  $("body").addClass("#modal-open");
+}).on("fadeOut", function () {
+  $("body").removeClass("#modal-open")
+});
 
 
 

@@ -64,8 +64,8 @@ body {
   width: auto;
   margin-top: 2%;
   /* background-image: url("../art/838257040.jpg");
-      background-size: 150px; */
-}
+      background-size: 150px; */  
+ }
 
 .main-container {
   background-color: rgba(0,0,0,1); 
@@ -89,17 +89,14 @@ header {
   background-color: rgba(0,0,0,1);
   border-bottom: 8px solid black;
   text-align: center;
-  /* background-image: url("../images/logo.svg");
-    background-repeat: no-repeat;
-    background-size: contain;  */
   padding-top: 0px;  
-  /* logo as bg image 
-  background-image: url("../images/logo2.svg") ; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: 100%;
-  */
+    /* logo as bg image 
+    background-image: url("../images/logo2.svg") ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100%;
+    */
 }
 
 .logo {
@@ -154,11 +151,28 @@ header {
   background-color: rgba(233,234,229,1); 
   position: relative;  
   cursor: pointer;
+  margin-bottom: 7.5px;
   padding-top: 35px;
 }  
 
+/* row 3 */
+
+.mocha,
+.dummy {
+  width: 24.5%;
+  height: auto;         
+  /* border-width: 10px 10px 10px 10px;
+    border-color: black;
+    border-style: solid;  */
+  background-color: rgba(233,234,229,1); 
+  position: relative;  
+  cursor: pointer;
+  padding-top: 35px;
+}  
+
+
 .clearfix {
-  width: 24%;
+  width: 24.5%;
   content: "";
   display: hidden;
   clear: both;
@@ -551,8 +565,8 @@ header {
 }
 
 .modal-content {
-  /* background-color: #D7D1C9; */
-  background-color: thistle;
+  background-color: #D7D1C9; 
+  /* background-color: thistle; */
   margin: 0 auto; 
   border-width: 5px 5px 5px 5px; 
     border-style: solid;
@@ -572,7 +586,8 @@ header {
   width: 39%;
     height: 510px;  
   float: left;
-  background-color: rgba(102,255,227,.5);
+  /* background-color: rgba(102,255,227,.5); */
+  background-color: #D7D1C9;
   padding: 0px 10px 0px 13px;
   border-width: 0px 0px 0px 8px;
     border-color: black;
@@ -589,6 +604,10 @@ header {
   font-size: 50px;
   font-weight: bold;
   cursor: pointer;
+}
+
+#modal-open {
+    overflow: hidden;
 }
 
 .modal-close:hover,
@@ -610,7 +629,7 @@ header {
 }
 
 .description {
-  padding: 15px;
+  padding: 60px 15px 15px 15px;
 }
 
 
@@ -1603,7 +1622,7 @@ header {
   and (max-width: 736px) { /* mobile styling start */
 
 
-.main-container {
+.main-container { /* mobile */
   background-color: rgba(0,0,0,1); 
   width: 80%;
   height: auto;
@@ -1620,7 +1639,7 @@ header {
     flex-wrap: wrap;   
 }
 
-header {
+header {  /* mobile */
   width: 100%;
   height: auto;
   background-color: rgba(0,0,0,1);
@@ -1630,22 +1649,23 @@ header {
     background-repeat: no-repeat;
     background-size: contain;  */
   padding-top: 0px;
+  margin-bottom: -10px;
 
 }
 
-.logo {
+.logo {  /* mobile */
   width: 100%;
   padding: 0px 1px 0px 1px;
   display: none !important;
 }
 
-.logo-mobile {
+.logo-mobile {   /* mobile */
   width: 100%;
   padding: 0px 1px 0px 1px;
   display: inline !important;
 }
 
-#coffee-cup {
+#coffee-cup { /* mobile */
   display: flex;
     flex-direction: column;
     align-items: center;
@@ -1653,7 +1673,7 @@ header {
     flex-wrap: wrap; 
 }
 
-/* row 1 */
+ /* mobile */
 
 .espresso,
 .cappuccino,
@@ -1661,7 +1681,10 @@ header {
 .flat-white,
 .cortado,
 .americano,
-.macchiato {
+.macchiato,
+.red-eye,
+.mocha,
+.dummy {
   width: 100%;
   height: auto;         
   /* border-width: 10px 10px 10px 10px;
@@ -1670,26 +1693,26 @@ header {
   background-color: rgba(233,234,229,1); 
   position: relative;  
   cursor: pointer;
-  margin-bottom: 9.5px;
+  margin-top: 7.5px;
+  margin-bottom: 1.5px;
   padding-top: 35px;
 } 
-.red-eye  {
+./* dummy  {
   width: 100%;
   height: auto;         
-  /* border-width: 10px 10px 10px 10px;
-    border-color: black;
-    border-style: solid;  */
   background-color: rgba(233,234,229,1); 
   position: relative;  
   cursor: pointer;
   margin-bottom: 0px;
   padding-top: 35px;
-} 
+} */
 
 /* ====== Modal - mobile  ====== */
 
 
-#modal-espresso, 
+
+
+#modal-espresso,  /* mobile */
 #modal-cappuccino, 
 #modal-cafe-latte, 
 #modal-flat-white, 
@@ -1699,37 +1722,38 @@ header {
 #modal-cortado, 
 #modal-mocha {
   display: none; /* Hidden by default */
-  position: absolute; /* Stay in place */
+  position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0px;
     top: 130px;
-  width: 100%; /* Full width */
-  height: auto; /* Full height */
+  width: 90%; /* Full width */
+  height: 100%; /* Full height */
   overflow: auto; /* auto - to enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */  
   background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
   padding-top: 35px;
 }
 
-.modal-content {
-  /* background-color: #D7D1C9; */
-  background-color: thistle;
+.modal-content {  /* mobile */
+  background-color: #D7D1C9; 
+  /* background-color: thistle; */
   margin: 0 auto; 
   /* border-width: 5px 5px 5px 5px; 
     border-style: solid;
     border-color: black; */
   width: 90%; 
+  height: 800px;
   border: none;
 }
 
-.modal-layout1 {
+.modal-layout1 { /* mobile */
   width: 100%;
     height: auto;
   background-color: #D7D1C9;
   border: none;
 }
 
-.modal-layout2 {
+.modal-layout2 { /* mobile */
   width: 100%;
     height: auto;  
   background-color: #D7D1C9;
@@ -1738,11 +1762,11 @@ header {
   margin: 0px;
 }
 
-#modal-show {
+#modal-show { /* mobile */
   display: block; 
 }
 
-.modal-close {
+.modal-close { /* mobile */
   color: rgba(0,0,0,1);
   font-size: 50px;
   font-weight: bold;
@@ -1753,7 +1777,7 @@ header {
 }
 
 .modal-close:hover,
-.modal-close:focus {
+.modal-close:focus { /* mobile */
   color: rgba(255,255,255,.5);
   text-decoration: none;
   cursor: pointer;  
@@ -1762,7 +1786,7 @@ header {
 .animation,
 .animation-short,
 .animation-mid,
-.animation-long {
+.animation-long { /* mobile */
   display: flex;
     flex-direction: column; 
     align-items: center;
@@ -1770,7 +1794,7 @@ header {
   padding-top: 50px; /* firefox needs to be in px, not % */
 }
 
-.description {
+.description { /* mobile */
   padding: 25px;
   font-size: 14px;
 }
@@ -1779,7 +1803,7 @@ header {
 /* Next & previous buttons */
 
  
-.buttons {
+.buttons { /* mobile */
   cursor: pointer; 
   width: auto;
   padding: 16px;
@@ -1788,25 +1812,26 @@ header {
   font-size: 30px;
   transition: 0.6s ease;
   position: relative;
+    z-index: 0;
     /* top: -450px; */
 }
 
   /* Position the "next button" to the right */
 
-.previous {
+.previous { /* mobile */
   float: left;
   border-radius: 0 3px 3px 0;
   position: relative;
     left: 1px;
 }
 
-.next {
+.next { /* mobile */
   float: right;
   border-radius: 3px 0 0 3px;
 }
 
   /* On hover, add a black background color with a little bit see-through */
-.previous:hover, .next:hover {
+.previous:hover, .next:hover { /* mobile */
   /* background-color: rgba(0,0,0,0.8); */
   color: rgba(255,255,255,.5);
 }
@@ -1815,7 +1840,7 @@ header {
 
 /* ========= ANIMATION - Mobile ========= */
 
-.cup-handle-anime {
+.cup-handle-anime { /* mobile */
     position: absolute;
       /*left: 282px;*/
       top: 115px;
@@ -1836,10 +1861,10 @@ header {
 }
 
 
-/* === espresso === */
+/* === espresso === */ 
 
 
-.esp-cup-top-md {
+.esp-cup-top-md { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 8px 8px 0px 8px;
@@ -1852,7 +1877,7 @@ header {
     position: relative;
 }
 
-.esp-cup-mid-md {
+.esp-cup-mid-md { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 0px 8px;
@@ -1861,7 +1886,7 @@ header {
     position: relative;
 }
 
-.esp-cup-bottom-lg {
+.esp-cup-bottom-lg { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 8px 8px;
@@ -1875,7 +1900,7 @@ header {
     overflow: hidden;
 }
 
-.esp-cup-bottom-lg::before {
+.esp-cup-bottom-lg::before { /* mobile */
     content: '';
     position: absolute;
     background: rgba(40,23,0,1.0); /* espresso color */
@@ -1885,7 +1910,7 @@ header {
     animation-delay: .5s; 
 } 
  
-.esp-ingred-container {
+.esp-ingred-container { /* mobile */
   display: none;
   position: absolute;
     left: 80px;
@@ -1906,7 +1931,7 @@ header {
 /* === cappuccino === */
 
 
-.cap-cup-top-lg {
+.cap-cup-top-lg { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 8px 8px 0px 8px;
@@ -1920,7 +1945,7 @@ header {
     overflow: hidden;    
 }
 
-.cap-cup-top-lg::before {
+.cap-cup-top-lg::before { /* mobile */
     content: '';
     position: absolute;
     background:
@@ -1936,7 +1961,7 @@ header {
     animation-delay: 4s; 
 }
 
-.cap-cup-mid-md {
+.cap-cup-mid-md { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 0px 8px;
@@ -1946,7 +1971,7 @@ header {
     overflow: hidden;    
 }
 
-.cap-cup-mid-md::before {
+.cap-cup-mid-md::before { /* mobile */
     content: '';
     position: absolute;
     background: rgba(2255,255,255,1);
@@ -1956,7 +1981,7 @@ header {
     animation-delay: 2s; 
 }
 
-.cap-cup-bottom-lg {
+.cap-cup-bottom-lg { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 8px 8px;
@@ -1970,7 +1995,7 @@ header {
     overflow: hidden;    
 }
 
-.cap-cup-bottom-lg::before {
+.cap-cup-bottom-lg::before { /* mobile */
     content: '';
     position: absolute;
     background: rgba(40,23,0,1.0); /* espresso color */
@@ -1980,7 +2005,7 @@ header {
     animation-delay: .5s; 
 } 
 
-.cap-ingred-container1 {
+.cap-ingred-container1 { /* mobile */
   display: none;
   position: absolute;
     left: 200px;
@@ -1988,7 +2013,7 @@ header {
   width: 100%;
 }
 
-.cap-ingred-container2 {
+.cap-ingred-container2 { /* mobile */
   display: none;
   position: absolute;
     left: 200px;
@@ -2000,7 +2025,7 @@ header {
 /* === cafe latte === */
 
 
-.cl-cup-top-sm {
+.cl-cup-top-sm { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 8px 8px 0px 8px;
@@ -2014,7 +2039,7 @@ header {
     overflow: hidden;    
 }
 
-.cl-cup-top-sm::before {
+.cl-cup-top-sm::before { /* mobile */
     content: '';
     position: absolute;
       background:
@@ -2030,7 +2055,7 @@ header {
     animation-delay: 3.5s; 
 }
 
-.cl-cup-mid-xlg {
+.cl-cup-mid-xlg { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 0px 8px;
@@ -2040,7 +2065,7 @@ header {
     overflow: hidden;    
 }
 
-.cl-cup-mid-xlg::before {
+.cl-cup-mid-xlg::before { /* mobile */
     content: '';
     position: absolute;
     background: rgba(255,255,255,1);/* milk */
@@ -2050,7 +2075,7 @@ header {
     animation-delay: 2s; 
 }
 
-.cl-cup-bottom-lg {
+.cl-cup-bottom-lg { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 8px 8px;
@@ -2064,7 +2089,7 @@ header {
     overflow: hidden;    
 }
 
-.cl-cup-bottom-lg::before {
+.cl-cup-bottom-lg::before { /* mobile */
   content: '';
   position: absolute;
   background: rgba(40,23,0,1.0); /* espresso color */
@@ -2074,7 +2099,7 @@ header {
   animation-delay: .5s; 
 } 
 
-.cl-ingred-container1 {
+.cl-ingred-container1 { /* mobile */
   display: none;
   position: absolute;
     left: 200px;
@@ -2090,7 +2115,7 @@ header {
         animation-delay: 5s;
       }
 
-.cl-ingred-container2 {
+.cl-ingred-container2 { /* mobile */
   display: none;
   position: absolute;
     left: 200px;
@@ -2108,7 +2133,7 @@ header {
 
 /* === flat white === */
 
-.fw-cup-top-sm {
+.fw-cup-top-sm { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 8px 8px 0px 8px;
@@ -2122,7 +2147,7 @@ header {
     overflow: hidden;    
 }
 
-.fw-cup-mid-sm {
+.fw-cup-mid-sm { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 0px 8px;
@@ -2132,7 +2157,7 @@ header {
     overflow: hidden;    
 }
 
-.fw-cup-mid-sm::before {
+.fw-cup-mid-sm::before { /* mobile */
     content: '';
     position: absolute;
       background:
@@ -2148,7 +2173,7 @@ header {
     animation-delay: 3.5s; 
 }
 
-.fw-cup-mid-xlg {
+.fw-cup-mid-xlg { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 0px 8px;
@@ -2158,7 +2183,7 @@ header {
     overflow: hidden;    
 }
 
-.fw-cup-mid-xlg::before {
+.fw-cup-mid-xlg::before { /* mobile */
     content: '';
     position: absolute;
     background: rgba(255,255,255,1.0);
@@ -2168,7 +2193,7 @@ header {
     animation-delay: 2s; 
 }
 
-.fw-cup-bottom-md {
+.fw-cup-bottom-md { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 8px 8px;
@@ -2182,7 +2207,7 @@ header {
     overflow: hidden;    
 }
 
-.fw-cup-bottom-md::before {
+.fw-cup-bottom-md::before { /* mobile */
     content: '';
     position: absolute;
     background: rgba(40,23,0,1.0); /* espresso color */
@@ -2192,7 +2217,7 @@ header {
     animation-delay: .5s; 
 } 
 
-.fw-ingred-container1 {
+.fw-ingred-container1 { /* mobile */
   display: none;
   position: absolute;
     left: 200px;
@@ -2208,7 +2233,7 @@ header {
         animation-delay: 5s;
       }
 
-.fw-ingred-container2 {
+.fw-ingred-container2 { /* mobile */
   display: none;  
   position: absolute;
     left: 200px;
@@ -2227,7 +2252,7 @@ header {
 
 /* === cortado === */
 
-.cor-cup-top-md {
+.cor-cup-top-md { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 8px 8px 0px 8px;
@@ -2241,7 +2266,7 @@ header {
     overflow: hidden;    
 }
 
-.cor-cup-mid-xlg {
+.cor-cup-mid-xlg { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 0px 8px;
@@ -2251,7 +2276,7 @@ header {
     overflow: hidden;    
 }
 
-.cor-cup-mid-xlg::before {
+.cor-cup-mid-xlg::before { /* mobile */
     content: '';
     position: absolute;
 
@@ -2269,7 +2294,7 @@ header {
     animation-delay: 2s; 
 }
 
-.cor-cup-bottom-md {
+.cor-cup-bottom-md { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 8px 8px;
@@ -2283,7 +2308,7 @@ header {
     overflow: hidden;    
 }
 
-.cor-cup-bottom-md::before {
+.cor-cup-bottom-md::before { /* mobile */
     content: '';
     position: absolute;
     background: rgba(40,23,0,1.0); /* espresso color */
@@ -2293,7 +2318,7 @@ header {
     animation-delay: .5s; 
 } 
 
-.cor-ingred-container1 {
+.cor-ingred-container1 { /* mobile */
   display: none;  
   position: absolute;
     left: 200px;
@@ -2311,7 +2336,7 @@ header {
 
 /* === americano === */
 
-.am-cup-top-md {
+.am-cup-top-md { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 8px 8px 0px 8px;
@@ -2325,7 +2350,7 @@ header {
     overflow: hidden;    
 }
 
-.am-cup-mid-xlg {
+.am-cup-mid-xlg { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 0px 8px;
@@ -2335,7 +2360,7 @@ header {
     overflow: hidden;    
 }
 
-.am-cup-mid-xlg::before {
+.am-cup-mid-xlg::before { /* mobile */
     content: '';
     position: absolute;
     background: rgba(64,164,223,0.2);  
@@ -2345,7 +2370,7 @@ header {
     animation-delay: 2s; 
 }
 
-.am-cup-bottom-md {
+.am-cup-bottom-md { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 8px 8px;
@@ -2359,7 +2384,7 @@ header {
     overflow: hidden;    
 }
 
-.am-cup-bottom-md::before {
+.am-cup-bottom-md::before { /* mobile */
     content: '';
     position: absolute;
     background: rgba(40,23,0,1.0); /* espresso color */
@@ -2369,7 +2394,7 @@ header {
     animation-delay: .5s; 
 }
 
-.am-ingred-container1 {
+.am-ingred-container1 { /* mobile */
   display: none;  
   position: absolute;
     left: 200px;
@@ -2390,7 +2415,7 @@ header {
 /* === macchiato === */
 
 
-.mac-cup-top-md {
+.mac-cup-top-md { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 8px 8px 0px 8px;
@@ -2404,7 +2429,7 @@ header {
     overflow: hidden;    
 }
 
-.mac-cup-mid-md {
+.mac-cup-mid-md { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 0px 8px;
@@ -2414,7 +2439,7 @@ header {
     overflow: hidden;    
 }
 
-.mac-cup-mid-md::before {
+.mac-cup-mid-md::before { /* mobile */
     content: '';
     position: absolute;
     background:
@@ -2430,7 +2455,7 @@ header {
     animation-delay: 2s; 
 }
 
-.mac-cup-bottom-lg {
+.mac-cup-bottom-lg { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 8px 8px;
@@ -2444,7 +2469,7 @@ header {
     overflow: hidden;    
 }
 
-.mac-cup-bottom-lg::before {
+.mac-cup-bottom-lg::before { /* mobile */
     content: '';
     position: absolute;
     background: rgba(40,23,0,1.0); /* espresso color */
@@ -2454,7 +2479,7 @@ header {
     animation-delay: .5s; 
 }
 
-.mac-ingred-container1 {
+.mac-ingred-container1 { /* mobile */
   display: none;  
   position: absolute;
     left: 200px;
@@ -2473,7 +2498,7 @@ header {
 
 /* === red eye === */
 
-.re-cup-top-sm {
+.re-cup-top-sm { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 8px 8px 0px 8px;
@@ -2487,7 +2512,7 @@ header {
     overflow: hidden;    
 }
 
-.re-cup-mid-xlg {
+.re-cup-mid-xlg { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 0px 8px;
@@ -2497,7 +2522,7 @@ header {
     overflow: hidden;    
 }
 
-.re-cup-mid-xlg::before {
+.re-cup-mid-xlg::before { /* mobile */
     content: '';
     position: absolute;
     background: rgba(56,32,1,1.0);  
@@ -2507,7 +2532,7 @@ header {
     animation-delay: 2s; 
 }
 
-.re-cup-bottom-md {
+.re-cup-bottom-md { /* mobile */
     border-style: solid;
     border-color: black;
     border-width: 0px 8px 8px 8px;
@@ -2521,7 +2546,7 @@ header {
     overflow: hidden;    
 }
 
-.re-cup-bottom-md::before {
+.re-cup-bottom-md::before { /* mobile */
     content: '';
     position: absolute;
     background: rgba(40,23,0,1.0); /* espresso color */
@@ -2531,7 +2556,7 @@ header {
     animation-delay: .5s; 
 } 
 
-.re-ingred-container1 {
+.re-ingred-container1 { /* mobile */
   display: none;  
   position: absolute;
     left: 200px;
@@ -2562,7 +2587,7 @@ header {
   and (min-width: 568px)
   and (max-width: 760px) { /* mobile styling start */
 
-.main-container {
+.main-container { /* mobile */
   background-color: rgba(0,0,0,1); 
   width: 85%;
   height: auto;
@@ -2579,7 +2604,7 @@ header {
     flex-wrap: wrap;   
 }
 
-header {
+header { /* mobile */
   width: 100%;
   height: auto;
   background-color: rgba(0,0,0,1);
@@ -2592,19 +2617,19 @@ header {
 
 }
 
-.logo {
+.logo { /* mobile */
   width: 100%;
   padding: 0px 1px 0px 1px;
   display: none !important;
 }
 
-.logo-mobile {
+.logo-mobile { /* mobile */
   width: 100%;
   padding: 0px 1px 0px 1px;
   display: inline !important;
 }
 
-#coffee-cup {
+#coffee-cup { /* mobile */
   display: flex;
     flex-direction: column;
     align-items: center;
@@ -2612,24 +2637,27 @@ header {
     flex-wrap: wrap; 
 }
 
-/* row 1 */
 
 .espresso,
 .cappuccino,
 .cafe-latte,
 .flat-white,
 .cortado,
-.americano {
+.americano,
+.macchiato,
+.red-eye,
+.mocha,
+.dummy { /* mobile */
   width: 48.5%;
   height: auto;         
   background-color: rgba(233,234,229,1); 
   position: relative;  
   cursor: pointer;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 1.5px;
   padding-top: 35px;
 } 
-.macchiato,
-.red-eye  {
+/* .dummy  {
   width: 48.5%;
   height: auto;         
   background-color: rgba(233,234,229,1); 
@@ -2637,22 +2665,22 @@ header {
   cursor: pointer;
   margin-bottom: 5px;
   padding-top: 35px;
-} 
+} */
 
 } /* mobile styling ends */
 
 
 
 
- /* mobile styling start */
+ /* mobile styling start - tablet size */
 
 @media screen 
   and (min-width: 768px)
   and (max-width: 1024px) {
 
-.main-container {
+.main-container { /* mobile */
   background-color: rgba(0,0,0,1); 
-  width: 90%;
+  width: 95%;
   height: auto;
   margin: 0 auto;
   position: relative;
@@ -2667,7 +2695,7 @@ header {
     flex-wrap: wrap;   
 }
 
-header {
+header { /* mobile */
   width: 100%;
   height: auto;
   background-color: rgba(0,0,0,1);
@@ -2677,19 +2705,19 @@ header {
 
 }
 
-.logo {
+.logo { /* mobile */
   width: 100%;
   padding: 0px 1px 0px 1px;
   display: inline !important;
 }
 
-.logo-mobile {
+.logo-mobile { /* mobile */
   width: 100%;
   padding: 0px 1px 0px 1px;
   display: none !important;
 }
 
-#coffee-cup {
+#coffee-cup { /* mobile */
   display: flex;
     flex-direction: column;
     align-items: center;
@@ -2704,8 +2732,11 @@ header {
 .cafe-latte,
 .flat-white,
 .cortado,
-.americano {
-  width: 32%;
+.americano,
+.macchiato,
+.red-eye,
+.mocha { /* mobile */
+  width: 32.2%;
   height: auto;         
   background-color: rgba(233,234,229,1); 
   position: relative;  
@@ -2713,9 +2744,8 @@ header {
   margin-bottom: 15px;
   padding-top: 35px;
 } 
-.macchiato,
-.red-eye  {
-  width: 32%;
+.dummy  { /* mobile */
+  width: 32.2%;
   height: auto;         
   background-color: rgba(233,234,229,1); 
   position: relative;  
@@ -2724,7 +2754,7 @@ header {
   padding-top: 35px;
 } 
 
-.clearfix {
+.clearfix { /* mobile */
   width: 24%;
   content: "";
   display: hidden;
@@ -2742,7 +2772,7 @@ header {
 #modal-red-eye, 
 #modal-macchiato,
 #modal-cortado, 
-#modal-mocha {
+#modal-mocha { /* mobile */
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -2755,7 +2785,7 @@ header {
   background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
 
-.modal-content {
+.modal-content { /* mobile */
   /* background-color: #D7D1C9; */
   background-color: thistle;
   margin: 0 auto; 
@@ -2766,14 +2796,14 @@ header {
     left: 40px;
 }
 
-.modal-layout1 {
+.modal-layout1 { /* mobile */
   width: 100%;
     height: auto;
   background-color: #D7D1C9;
   border: none;
 }
 
-.modal-layout2 {
+.modal-layout2 { /* mobile */
   width: 100%;
     height: auto;  
   background-color: #D7D1C9;
@@ -2782,11 +2812,11 @@ header {
   margin: 0px;
 }
 
-#modal-show {
+#modal-show { /* mobile */
   display: block; 
 }
 
-.modal-close {
+.modal-close { /* mobile */
   color: rgba(0,0,0,1);
   font-size: 50px;
   font-weight: bold;
@@ -2797,7 +2827,7 @@ header {
 }
 
 .modal-close:hover,
-.modal-close:focus {
+.modal-close:focus { /* mobile */
   color: rgba(255,255,255,.5);
   text-decoration: none;
   cursor: pointer;  
@@ -2806,7 +2836,7 @@ header {
 .animation,
 .animation-short,
 .animation-mid,
-.animation-long {
+.animation-long { /* mobile */
   display: flex;
     flex-direction: column; 
     align-items: center;
@@ -2814,7 +2844,7 @@ header {
   padding-top: 50px; /* firefox needs to be in px, not % */
 }
 
-.description {
+.description { /* mobile */
   padding: 25px;
   font-size: 18px;
 }
@@ -2824,7 +2854,7 @@ header {
 /* Next & previous buttons */
 
  
-.buttons {
+.buttons { /* mobile */
   cursor: pointer; 
   width: auto;
   padding: 16px;
@@ -2839,33 +2869,71 @@ header {
 
   /* Position the "next button" to the right */
 
-.previous {
+.previous { /* mobile */
   float: left;
   border-radius: 0 3px 3px 0;
   position: relative;
     left: 500px;
 }
 
-.next {
+.next { /* mobile */
   float: right;
   border-radius: 3px 0 0 3px;
 }
 
   /* On hover, add a black background color with a little bit see-through */
-.previous:hover, .next:hover {
+.previous:hover, .next:hover { /* mobile */
   /* background-color: rgba(0,0,0,0.8); */
   color: rgba(255,255,255,.5);
 }
 
 /* ======== modal text ======= */
 
-.modal-label {
+.modal-label { /* mobile */
   font-family: sanchez;
     font-size: 25px;
   padding-top: 30px; 
   text-align: center; 
 }
 
+
+/****** ANIMATION ***
+
+.esp-ingred-container {
+  display: none;  
+  position: absolute;
+    left: 78px;
+    top: 20px;
+  width: 200%;
+}
+
+.cap-ingred-container1,
+.cl-ingred-container1,
+.fw-ingred-container1,
+.cor-ingred-container1,
+.am-ingred-container1,
+.mac-ingred-container1,
+.re-ingred-container1 {
+  display: none;  
+  position: absolute;
+    left: 78px;
+    top: 170px;
+  width: 200%;
+}
+
+.cap-ingred-container2,
+.cl-ingred-container2,
+.fw-ingred-container2,
+.cor-ingred-container2,
+.am-ingred-container2,
+.mac-ingred-container2,
+.re-ingred-container2 {
+  display: none;  
+  position: absolute;
+    left: 78px;
+    top: 110px;
+  width: 200%;
+}
 
 
 } /* mobile styling ends */
