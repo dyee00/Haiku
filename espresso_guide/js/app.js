@@ -183,7 +183,8 @@ window.onclick = function(event) {
 
 // $("#modal-espresso").on("fadeIn", function () {
 //   $("body").addClass("#modal-open");
-// }).on("fadeOut", function () {
+// });
+// $("#modal-espresso").on("fadeOut", function () {
 //   $("body").removeClass("#modal-open")
 // });
 
